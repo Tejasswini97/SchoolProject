@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+ "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<package name="default" extends="struts-default">
+
+		<action name="index">
+			<result>index.jsp</result>
+		</action>
+
+		<action name="admin" class="com.action.AdminAction">
+			<result name="success">welcome.jsp</result>
+			<result name="input">admin.jsp</result>
+		</action>
+
+		<action name="viewResult" class="com.action.ViewResultAction">
+            <result name="success">resultview.jsp</result>
+            <result name="error">resultview.jsp</result>
+            </action>
+
+		<action name="viewtoppers" class="com.action.TopperAction">
+			<result name="TOPPERS">toppers.jsp</result>
+		</action>
+		
+		<action name="viewdetails" class="com.action.ViewDetailsAction">
+			<result name="SUCESS">viewdetails.jsp</result>
+			<result name="ERROR">viewdetails.jsp</result>
+		</action>
+
+		<action name="viewfaculty" class="com.action.FacultyAction">
+			<result name="Faculty">faculty.jsp</result>
+		</action>
+
+		<action name="Faculty" class="com.action.InsertFaculty">
+			<result name="INSERT">insertFaculty.jsp</result>
+		</action>
+
+		<action name="Student" class="com.action.InsertStudent">
+			<result name="STUDENT">insertstudent.jsp</result>
+		</action>
+
+		<action name="user" class="com.action.UserAction">
+			<result name="success">adduser.jsp</result>
+			<result name="input">user.jsp</result>
+		</action>
+
+		<action name="admission" class="com.action.AdmissionAction">
+			<result name="ADMISSION">admission.jsp</result>
+		</action>
+
+
+		<action name="viewadmission" class="com.action.ViewAdmission">
+			<result name="VIEW ADMISSION">viewadmission.jsp</result>
+		</action>
+
+
+
+	</package>
+</struts>
